@@ -1,6 +1,6 @@
-# Ingress Controller
+# 🌐 Ingress Controller
 
-### OIDC provider
+### 🔐 OIDC provider
 trust and authentication provider
 
 REGION_CODE=us-east-1
@@ -13,20 +13,20 @@ eksctl utils associate-iam-oidc-provider \
     --approve
 ```
 
-### Download IAM Policy
+### 📥 Download IAM Policy
 
 ```
 curl -o iam-policy.json https://raw.githubusercontent.com/kubernetes-sigs/aws-load-balancer-controller/v2.13.4/docs/install/iam_policy.json
 ```
 
-### Create IAM Policy
+### 🧩 Create IAM Policy
 ```
 aws iam create-policy \
     --policy-name AWSLoadBalancerControllerIAMPolicy \
     --policy-document file://iam-policy.json
 ```
 
-### Create IAM Role and K8 ServiceAccount. 
+### ⚙️ Create IAM Role and K8 ServiceAccount. 
 Mapping between IAM ROle and K8 Service account
 ```
 eksctl create iamserviceaccount \
@@ -39,7 +39,7 @@ eksctl create iamserviceaccount \
 --approve
 ```
 
-### Install Load balancer controller drivers
+### 🚀 Install Load balancer controller drivers
 
 ```
 helm repo add eks https://aws.github.io/eks-charts
