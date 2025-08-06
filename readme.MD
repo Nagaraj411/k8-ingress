@@ -1,7 +1,7 @@
-🌐 Ingress Controller Setup
+# 🌐 Ingress Controller Setup
 
-🔐 OIDC Provider
-✅ Trust and authentication provider setup
+## 🔐 OIDC Provider
+## ✅ Trust and authentication provider setup
 
 REGION_CODE=us-east-1
 CLUSTER_NAME=roboshop-dev
