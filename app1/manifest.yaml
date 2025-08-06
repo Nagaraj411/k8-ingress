@@ -25,7 +25,7 @@ spec:
     spec:
       containers:
       - name: app1
-        image: joindevops/app1:v1
+        image: nagaraj411/app1:v1
 ---
 apiVersion: v1
 kind: Service
@@ -56,9 +56,9 @@ metadata:
     alb.ingress.kubernetes.io/target-type: ip
     alb.ingress.kubernetes.io/group.name: joindevops
 spec:
-  ingressClassName: alb
+  ingressClassName: alb # must be give ingress class name otherwise it will not work & not shown error at the time of apply
   rules:
-  - host: "app1.daws84s.site"
+  - host: "app1.devops84.shop"
     http:
       paths:
       - pathType: Prefix
